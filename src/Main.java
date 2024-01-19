@@ -1,10 +1,21 @@
-import java.util.Scanner;//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
 public class Main {
-    static int myMethod(int x, int y) {
-        return x + y;
+    static void checkAge(int age) {
+        if(age < 18) {
+            System.out.print("Sorry you are not eligible to vote!");
+        }
+        else{
+            System.out.print("Congratulation! You are eligible to vote");
+        }
     }
     public static void main(String[] args) {
-        System.out.println(myMethod(5,6));
+        Scanner myObj = new Scanner(System.in);
+        System.out.print("Enter your Name: ");
+        String name = myObj.nextLine();
+        System.out.print("Enter your Age: ");
+        int age = myObj.nextInt();
+        System.out.print("Enter your ID: ");
+        int id = myObj.nextInt();
+        checkAge(age);
     }
 }
